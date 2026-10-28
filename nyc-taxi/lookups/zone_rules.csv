@@ -1,0 +1,6 @@
+description,execution_order,source_cols,pattern,replacement,target_col,overwrite_if_populated
+Name the N/A borough,1,Borough,^N/A$,Outside NYC,Borough,true
+Copy the zone name,2,Zone,^(.*)$,${1},zone,true
+Tag the two Corona zones with their id,3,"LocationID,Zone",^(5[67])([A-Z].*)$,${2} (${1}),zone,true
+Tag the three island zones with their id,4,"LocationID,Zone",^(10[3-5])([A-Z].*)$,${2} (${1}),zone,true
+Name the N/A zone,5,zone,^N/A$,Unknown zone,zone,true

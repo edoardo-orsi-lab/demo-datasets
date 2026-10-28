@@ -1,0 +1,3 @@
+description,execution_order,source_cols,pattern,replacement,target_col,overwrite_if_populated
+Pickup day,1,tpep_pickup_datetime,^(.{10}).*$,${1},day,true
+Pickup hour,2,tpep_pickup_datetime,^.{11}(.{2}).*$,${1}:00,hour,true
